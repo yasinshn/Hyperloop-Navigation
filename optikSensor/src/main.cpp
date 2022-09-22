@@ -109,8 +109,8 @@ void setup() {
 setCpuFrequencyMhz(40);
 Serial.begin(9600);
 
-attachInterrupt(digitalPinToInterrupt(5), beginCounter2, HIGH);
 attachInterrupt(digitalPinToInterrupt(5), beginCounter2, FALLING);
+attachInterrupt(digitalPinToInterrupt(4), beginCounter1, FALLING);
 
 timer1 = timerBegin(0, 1000, true); // Prescale Oranı : 1000
 timer2 = timerBegin(1, 1000, true); // Prescale : 1000
